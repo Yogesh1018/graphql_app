@@ -10,6 +10,12 @@ module Types
       argument :id, ID, required: true
     end
 
+    field :book, Types::BookType, null: false do
+      argument :id, ID, required: true
+    end
+
+    field :books, [Types::BookType], null: false
+
     def users
       User.all
     end
@@ -18,5 +24,13 @@ module Types
       User.find(id)
     end
     
+    def book(id:)
+      Book.find(id)
+    end
+
+    def books
+      Book.all
+    end
+
   end
 end
