@@ -35,6 +35,7 @@ group :development, :test do
   gem 'faker'
   # A development utility to test GraphQL queries.
   gem 'graphiql-rails'
+  gem 'pry'
 end
 
 group :development do
